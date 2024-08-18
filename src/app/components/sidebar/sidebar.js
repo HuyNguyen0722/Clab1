@@ -101,6 +101,7 @@ const Sidebar = async () => {
                     </li>
                 ))}
             </ul>
+            <button className={cx("logout")}><MdLogout/>Logout</button>
         </div>
     )
 }
