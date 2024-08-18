@@ -8,12 +8,14 @@ export const metadata = {
 
 const cx = classNames.bind(styles);
 
-function RootLayout({children}) {
-  return ( 
+function RootLayout({ children }) {
+  return (
     <html lang="en">
-      <body className={cx("container")}>{children}</body>
+      <body className={cx("container")}>
+        {children}
+      </body>
     </html>
-   );
+  );
 }
 
 export default RootLayout;
