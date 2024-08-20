@@ -10,22 +10,22 @@ function Navbar() {
 
     const pathname = usePathname();
 
-    return ( 
+    return (
         <div className={cx("container")}>
             <div className={cx("title")}>{pathname.split("/").pop()} </div>
             <div className={cx("menu")}>
                 <div className={cx("search")}>
-                    <MdSearch/>
-                    <input type="text" placeholder="Search..." className={cx("input")}/>
+                    <MdSearch />
+                    <input type="text" placeholder="Search..." className={cx("input")} />
                 </div>
                 <div className={cx("icons")}>
-                    <MdOutlineChat size={20}/>
-                    <MdNotifications size={20}/>
-                    <MdPublic size={20}/>
+                    <MdOutlineChat size={20} />
+                    <MdNotifications size={20} />
+                    <MdPublic size={20} />
                 </div>
             </div>
         </div>
-     );
+    );
 }
 
 export default Navbar;
