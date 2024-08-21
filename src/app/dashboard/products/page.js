@@ -13,7 +13,7 @@ function Product() {
         <div className={cx("container")}>
             <div className={cx("top")}>
                 <Searchbar placeholder="Search for a product..." />
-                <Link href="/dashboard/users/add">
+                <Link href="/dashboard/products/addproduct">
                     <button className={cx("addButton")}>Add New</button>
                 </Link>
             </div>

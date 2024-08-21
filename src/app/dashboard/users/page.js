@@ -13,7 +13,7 @@ function User() {
         <div className={cx("container")}>
             <div className={cx("top")}>
                 <Searchbar placeholder="Search for a user..." />
-                <Link href="/dashboard/users/add">
+                <Link href="/dashboard/users/adduser">
                     <button className={cx("addButton")}>Add New</button>
                 </Link>
             </div>
@@ -42,7 +42,7 @@ function User() {
                         <td>Active</td>
                         <td>
                             <div className={cx("buttons")}>
-                                <Link href="/">
+                                <Link href="/dashboard/users/id">
                                     <button className={`${cx("button")} ${cx("view")}`}>View</button>
                                 </Link>
                                 <button className={`${cx("button")} ${cx("delete")}`}>Delete</button>
@@ -62,7 +62,7 @@ function User() {
                         <td>Active</td>
                         <td>
                             <div className={cx("buttons")}>
-                                <Link href="/">
+                                <Link href="/dashboard/users/id">
                                     <button className={`${cx("button")} ${cx("view")}`}>View</button>
                                 </Link>
                                 <button className={`${cx("button")} ${cx("delete")}`}>Delete</button>
@@ -82,7 +82,7 @@ function User() {
                         <td>Active</td>
                         <td>
                             <div className={cx("buttons")}>
-                                <Link href="/">
+                                <Link href="/dashboard/users/id">
                                     <button className={`${cx("button")} ${cx("view")}`}>View</button>
                                 </Link>
                                 <button className={`${cx("button")} ${cx("delete")}`}>Delete</button>
