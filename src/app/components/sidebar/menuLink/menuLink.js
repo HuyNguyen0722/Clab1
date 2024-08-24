@@ -7,18 +7,18 @@ import { usePathname } from "next/navigation";
 
 const cx = classNames.bind(styles)
 
-function MenuLink({item}) {
+function MenuLink({ item }) {
 
     const pathname = usePathname();
 
     console.log(pathname)
 
-    return ( 
+    return (
         <Link href={item.path} className={`${cx("container")} ${pathname === item.path}`}>
             {item.icon}
             {item.title}
         </Link>
-     );
+    );
 }
 
 export default MenuLink;

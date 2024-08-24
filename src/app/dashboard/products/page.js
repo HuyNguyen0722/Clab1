@@ -42,7 +42,7 @@ function Product() {
                         <td>34</td>
                         <td>
                             <div className={cx("buttons")}>
-                                <Link href="/">
+                                <Link href="/dashboard/products/id">
                                     <button className={`${cx("button")} ${cx("view")}`}>View</button>
                                 </Link>
                                 <button className={`${cx("button")} ${cx("delete")}`}>Delete</button>
@@ -62,7 +62,7 @@ function Product() {
                         <td>34</td>
                         <td>
                             <div className={cx("buttons")}>
-                                <Link href="/">
+                                <Link href="/dashboard/products/id">
                                     <button className={`${cx("button")} ${cx("view")}`}>View</button>
                                 </Link>
                                 <button className={`${cx("button")} ${cx("delete")}`}>Delete</button>
@@ -82,7 +82,7 @@ function Product() {
                         <td>34</td>
                         <td>
                             <div className={cx("buttons")}>
-                                <Link href="/">
+                                <Link href="/dashboard/products/id">
                                     <button className={`${cx("button")} ${cx("view")}`}>View</button>
                                 </Link>
                                 <button className={`${cx("button")} ${cx("delete")}`}>Delete</button>

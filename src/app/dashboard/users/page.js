@@ -5,10 +5,15 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from '../../../assets/images/user01.jpg'
 import Pagination from "@/app/components/pagination/pagination";
+import { fetchUser } from "@/app/lib/data";
 
 const cx = classNames.bind(styles)
 
-function User() {
+async function User() {
+
+    const users = await fetchUser();
+    console.log(users)
+
     return (
         <div className={cx("container")}>
             <div className={cx("top")}>
@@ -20,8 +25,8 @@ function User() {
             <table className={cx("table")}>
                 <thead>
                     <tr>
-                        <td>Name</td>
-                        <td>Email</td>
+                        <td>{users.name}</td>
+                        <td>{users.email}</td>
                         <td>Created At</td>
                         <td>Role</td>
                         <td>Status</td>
