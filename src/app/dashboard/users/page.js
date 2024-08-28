@@ -11,9 +11,9 @@ const cx = classNames.bind(styles)
 
 async function User() {
 
-    const users = await fetchUser();
-    console.log(users)
+    const users = (await fetchUser()) || [];
 
+    console.log(users)
     return (
         <div className={cx("container")}>
             <div className={cx("top")}>
@@ -25,75 +25,20 @@ async function User() {
             <table className={cx("table")}>
                 <thead>
                     <tr>
-                        <td>{users.name}</td>
-                        <td>{users.email}</td>
+                        <td>name</td>
+                        <td>email</td>
                         <td>Created At</td>
-                        <td>Role</td>
+                        <td>role</td>
                         <td>Status</td>
                         <td>Action</td>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            <div className={cx("user")}>
-                                <Image src={logo} width={40} height={40} alt="" className={cx("userImage")} />
-                                Nguyễn Văn Huy
-                            </div>
-                        </td>
-                        <td>namkhon@gmail.com</td>
-                        <td>22.07.2024</td>
-                        <td>Admin</td>
-                        <td>Active</td>
-                        <td>
-                            <div className={cx("buttons")}>
-                                <Link href="/dashboard/users/id">
-                                    <button className={`${cx("button")} ${cx("view")}`}>View</button>
-                                </Link>
-                                <button className={`${cx("button")} ${cx("delete")}`}>Delete</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div className={cx("user")}>
-                                <Image src={logo} width={40} height={40} alt="" className={cx("userImage")} />
-                                Nguyễn Văn Huy
-                            </div>
-                        </td>
-                        <td>namkhon@gmail.com</td>
-                        <td>22.07.2024</td>
-                        <td>Admin</td>
-                        <td>Active</td>
-                        <td>
-                            <div className={cx("buttons")}>
-                                <Link href="/dashboard/users/id">
-                                    <button className={`${cx("button")} ${cx("view")}`}>View</button>
-                                </Link>
-                                <button className={`${cx("button")} ${cx("delete")}`}>Delete</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div className={cx("user")}>
-                                <Image src={logo} width={40} height={40} alt="" className={cx("userImage")} />
-                                Nguyễn Văn Huy
-                            </div>
-                        </td>
-                        <td>namkhon@gmail.com</td>
-                        <td>22.07.2024</td>
-                        <td>Admin</td>
-                        <td>Active</td>
-                        <td>
-                            <div className={cx("buttons")}>
-                                <Link href="/dashboard/users/id">
-                                    <button className={`${cx("button")} ${cx("view")}`}>View</button>
-                                </Link>
-                                <button className={`${cx("button")} ${cx("delete")}`}>Delete</button>
-                            </div>
-                        </td>
-                    </tr>
+                    {users.map((user) => (
+                        <tr key={user.id}>
+                            
+                        </tr>
+                    ))}
                 </tbody>
             </table>
             <Pagination />
